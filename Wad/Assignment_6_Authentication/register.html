@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+  <h2>Register</h2>
+  <form name="registerForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="email" required><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+    <input type="submit" value="Register" onclick="register()">
+  </form>
+  <script type="text/javascript">
+
+        async function register() {
+            const password = document.getElementById('password').value;
+            const name =document.getElementById('name').value;
+            const username =document.getElementById('username').value;
+            const email =document.getElementById('email').value;
+
+            const data = {
+                name: name,
+                username: username,
+                email: email,
+                password: password
+            }
+            await fetch("http://localhost:5000/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+        }
+  </script>
+</body>
+</html>

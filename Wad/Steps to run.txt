@@ -1,0 +1,33 @@
+-----For assignment 1,2,10,12 --------
+run on live server
+
+
+-----For assignment 3,4 --------
+npm i
+npm start
+
+-----For assignment 5,7 --------
+npm init -y
+node index.js
+
+-----For assignment 6 --------
+npm init -y
+node index.js
+
+then start live server first on register.html (register here)
+and then verify on login.html
+
+-----For assignment 8,11 -------- 
+npm install -g create-react-app 
+npx create-react-app react     (app name)
+//paste assignment 8 into react
+
+cd react
+npm start
+
+-----For assignment 9 --------
+npm install -g create-react-app 
+npx create-react-app react
+cd react
+//change app.js to return <h2> Hello by Krishna </h2>
+ 

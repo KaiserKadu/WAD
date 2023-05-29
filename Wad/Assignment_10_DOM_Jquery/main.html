@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM by JQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Task 1: Hide and show an element
+      $('#hide-btn').click(function() {
+        $('#content').hide();
+      });
+
+      $('#show-btn').click(function() {
+        $('#content').show();
+      });
+
+      // Task 2: Toggle an element
+      $('#toggle-btn').click(function() {
+        $('#content').toggle();
+      });
+
+      // Task 3: Fade an element
+      $('#fade-btn').click(function() {
+        $('#content').fadeOut();
+      });
+
+      // Task 4: Slide an element
+      $('#slide-btn').click(function() {
+        $('#content').slideUp();
+      });
+
+      // Task 5: Change CSS properties
+      $('#change-color-btn').click(function() {
+        $('#content').css('color', 'red');
+      });
+
+      $('#change-bg-btn').click(function() {
+        $('#content').css('background-color', 'lightblue');
+      });
+
+      // Task 6: AJAX request
+      $('#load-btn').click(function() {
+        $.ajax({
+          url: 'data.txt',
+          success: function(data) {
+            $('#content').text(data);
+          },
+          error: function() {
+            $('#content').text('Error loading data.');
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <button id="hide-btn">Hide</button>
+  <button id="show-btn">Show</button>
+  <button id="toggle-btn">Toggle</button>
+  <button id="fade-btn">Fade</button>
+  <button id="slide-btn">Slide</button>
+  <button id="change-color-btn">Change Color</button>
+  <button id="change-bg-btn">Change Background</button>
+  <button id="load-btn">Load Data</button>
+
+  <div id="content">
+    This is Krishna
+  </div>
+</body>
+</html>
+
