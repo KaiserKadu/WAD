@@ -3,6 +3,7 @@ run on live server
 
 
 -----For assignment 3,4 --------
+npm install -g @angular/cli
 npm i
 npm start
 
